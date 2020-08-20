@@ -1,0 +1,6 @@
+num1=int(input())
+num2=int(input())
+print(num1*(num2%10))
+print("%d" %(num1*int(num2/10%10)))
+print("%d" %(num1*int(num2/100%10)))
+print(num1*num2)
