@@ -1,12 +1,12 @@
-n,m=map(int,input().strip().split())
-arr=[[0]*m for _ in range(n)]
+import sys
+n,m=map(int,sys.stdin.readline().strip().split())
+m=[[0]*m for _ in range(n)]
 for i in range(n):
-    arr[i]=list(map(int,input().strip().split()))
-k=int(input().strip())
+    m[i]=list(map(int,sys.stdin.readline().strip().split()))
+k=int(sys.stdin.readline().strip())
 for _ in range(k):
-    i,j,x,y=map(int,input().strip().split())
+    i,j,x,y=map(int,sys.stdin.readline().strip().split())
     result=0
-    for k in range(j-1,y):
-        for l in range(i-1,x):
-            result+=arr[l][k]
+    for l in range(i-1,x):
+        result+=sum(m[i-1:x][j-1:y])
     print(result)

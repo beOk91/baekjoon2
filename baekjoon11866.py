@@ -1,0 +1,10 @@
+n,k=map(int,input().strip().split())
+arr=[i for i in range(1,n+1)]
+idx=k
+print("<",end="")
+while len(arr)!=0:
+    if idx>len(arr):idx-=len(arr)
+    print(arr.pop(idx-1),end=" ")
+    idx+=(k-1)
+    if idx>len(arr):idx-=len(arr)
+print(">",end="")

@@ -1,14 +1,11 @@
 num=int(input())
 num_list=list(map(int,input().strip().split()))
+sosu=[False]*1001
 for element in num_list:
-    cnt=0
-    if element==1:
-        num-=1
-    else:
-        for j in range(element,0,-1):
-            if cnt>2:
-                num-=1
-                break
-            if element%j==0:
-                cnt+=1
-print(num)
+    sosu[element]=True
+sosu[1]=False
+for i in range(2,1001):
+    for j in range(i+i,1001,i):
+        sosu[j]=False
+
+print(sum(1 if sosu[i] else 0 for i in range(1001)))

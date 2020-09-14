@@ -1,7 +1,5 @@
-arr=[0]*10001
-arr[1]=1
-n=int(input())
-for i in range(2,n+1):
-    arr[i]=arr[i-1]+arr[i-2]
-    print(i,arr[i])
-print(arr[n])
+n=int(input().strip())
+fibo=[0,1,1,2]+[0]*(n-3)
+for i in range(3,n+1):
+    fibo[i]=(fibo[i-1]+fibo[i-2])%1000000
+print(fibo[n])

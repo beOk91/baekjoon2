@@ -1,15 +1,10 @@
-n=int(input())
-n_list=list(map(int,input().strip().split()))
+import sys
+n=int(sys.stdin.readline().strip())
+n_list=list(map(int,sys.stdin.readline().strip().split()))
 arr={}
 for element in n_list:
-
-for element in n_list:
-    arr[element]+=1
+    arr[element]=1
 m=int(input())
-m_list=list(map(int,input().strip().split()))
-
+m_list=list(map(int,sys.stdin.readline().strip().split()))
 for element in m_list:
-    if arr[element]>0:
-        print("1")
-    else:
-        print("0")
+    print(arr.get(element,0))

@@ -1,3 +1,2 @@
 a,b,v=map(int,input().strip().split())
-day= v//(a-b)
-print(day-2 if a-b<b else day-1)
+print((v-a)//(a-b)+2 if (v-a)%(a-b)!=0 else (v-a)//(a-b)+1)

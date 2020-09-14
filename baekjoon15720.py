@@ -1,0 +1,6 @@
+n=min(map(int,input().strip().split()))
+b_list=sorted(list(map(int,input().strip().split())),reverse=True)
+c_list=sorted(list(map(int,input().strip().split())),reverse=True)
+d_list=sorted(list(map(int,input().strip().split())),reverse=True)
+print(sum(b_list)+sum(c_list)+sum(d_list))
+print(int((sum(b_list)+sum(c_list)+sum(d_list))-sum((b_list[i]+c_list[i]+d_list[i])*0.1 for i in range(n))))

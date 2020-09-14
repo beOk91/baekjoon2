@@ -1,7 +1,11 @@
-def f(n,k):
-    if n<k:
-        return 0
-    else:
-        return n+1+f(n-k+1,k)
-n,k=map(int,input().strip().split())
-print(f(n,k))
+while True:
+    try:
+        n,k=map(int,input().strip().split())
+        cnt,stamp=n,n
+        while stamp>=k:
+            cnt+=stamp//k
+            stamp=stamp-stamp//k*k+stamp//k
+        print(cnt)
+            
+    except:
+        break

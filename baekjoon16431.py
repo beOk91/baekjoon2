@@ -1,0 +1,6 @@
+bessie=list(map(int,input().strip().split()))
+daisy=list(map(int,input().strip().split()))
+jone=list(map(int,input().strip().split()))
+daisy_t=abs(daisy[0]-jone[0])+abs(daisy[1]-jone[1])
+bessie_t=abs(bessie[0]-jone[0]) if abs(bessie[0]-jone[0])>abs(bessie[1]-jone[1]) else abs(bessie[1]-jone[1])
+print("bessie" if bessie_t<daisy_t else "tie" if bessie_t==daisy_t else "daisy")
